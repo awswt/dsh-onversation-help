@@ -134,6 +134,8 @@ assert.equal(JSON.stringify(connector).includes('accessToken'), false)
 const selected = JSON.parse(await ctx.registeredTool.execute({ action: 'expert', expertId: 'ai-agent-engineer' }, { agent }))
 assert.equal(selected.applied, true)
 assert.equal(selected.expert.id, 'ai-agent-engineer')
+assert.equal(typeof selected.expert.displayName, 'string')
+assert.equal(selected.expert.displayName, '程枢')
 assert.equal(sections.some(section => section.name.startsWith('onversation-help:expert:')), true)
 assert.equal(providers.some(provider => provider.name.startsWith('onversation-help-expert-')), true)
 
