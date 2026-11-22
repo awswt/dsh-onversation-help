@@ -98,6 +98,7 @@ onversation_help(action="off")
 | `marketBaseUrl` | WorkBuddy 市场 | 必须是 HTTPS，且在 `allowHosts` 内 |
 | `allowHosts` | 市场 host | 允许接收凭据的 host |
 | `allowInsecureLoopback` | `false` | 仅本地测试使用 |
+| `allowPublicMarketAuth` | `false` | 允许把 connector token 发到公开市场 host；默认拒绝，防止误配泄露 |
 | `maxPromptChars` | `60000` | 专家提示词截断上限 |
 | `maxSelectedSkills` | `64` | 单会话技能上限 |
 | `dataDir` | `$DSH_HOME/onversation-help` | sidecar 与缓存目录 |
