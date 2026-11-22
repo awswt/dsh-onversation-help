@@ -178,6 +178,16 @@ npm test
 
 当前测试覆盖：提示词转义、HTTPS/host 允许列表、内联密钥拒绝、WorkBuddy connector 只读解析、市场缓存与认证头、本机专家解析、路径穿越。
 
+### 手工端到端测试（假模型）
+
+`test/fake-model-e2e.mjs` 与 `test/fake-model-expert-e2e.mjs` 会启动一个本地 Messages 兼容 SSE 服务，冒充模型返回 `onversation_help` 工具调用，用来验证真实 DSH 宿主里的工具执行、专家提示段与技能目录注入。需要先安装到测试 profile，并设置：
+
+```bash
+DSH_APP_EXE="D:/Program Files/deepseek harness/DeepSeek Harness.exe" DSH_BIN="D:/Program Files/deepseek harness/resources/app.asar/dsh/node_modules/@deepseek-ai/dsh/lib/bin.js" DSH_TEST_PROFILE=onversation-gh node test/fake-model-expert-e2e.mjs
+```
+
+脚本不会访问真实模型，也不会消耗 token；假 token 只发给本地 127.0.0.1 服务。
+
 设计文档：[docs/dsh-onversation-help-design.md](docs/dsh-onversation-help-design.md)
 
 ## License
