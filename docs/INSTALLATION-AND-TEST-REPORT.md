@@ -3,7 +3,7 @@
 - 日期：2026-11-22
 - 仓库：`git@github.com:awswt/dsh-onversation-help.git`
 - 分支：`main`
-- 最新提交：`7a20293`
+- 最新提交：`bcafcfa`
 - 宿主：DeepSeek Harness `0.2.2-rc.5`，测试 profile `onversation-gh`（headless 组合）
 
 ---
@@ -15,7 +15,7 @@
 | 插件改名 | 完成，统一为 `dsh-onversation-help`（按用户指定保留 `onversation` 拼写） |
 | WorkBuddy connector 接入 | 完成，只读复用 `dsh-connect-workbuddy` 账号库，提供 `connector` 状态与 `workbuddy-connector` 认证模式 |
 | 会话级专家/技能 | 完成，`agent.ctx` 子插件 + 两个技能 provider + sidecar |
-| 代码推送 | 完成，`main` 已推送 4 个提交 |
+| 代码推送 | 完成，`main` 已推送 6 个提交 |
 | GitHub 安装 | 完成，`onversation-gh` profile 从 `git+ssh://git@github.com/awswt/dsh-onversation-help.git` 安装成功 |
 | 单元测试 | 8/8 通过 |
 | 宿主接线测试 | 通过（工具、命令、专家选择、技能、清理、fiber 销毁） |
@@ -422,6 +422,8 @@ node test/fake-model-expert-e2e.mjs
 ```text
 git@github.com:awswt/dsh-onversation-help.git
 main
+bcafcfa fix: fall back to manifest display name when bundle metadata is absent
+320715d docs: add installation and test report
 7a20293 fix: refuse connector token on the public market host by default
 be5b19b fix: resolve expert display name from bundle metadata
 4110b90 fix: store expert display name as a string; add fake-model e2e probes
