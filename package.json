@@ -1,0 +1,45 @@
+{
+  "name": "dsh-onversation-help",
+  "version": "0.1.0",
+  "description": "Session-scoped experts, skills and WorkBuddy connector status for DeepSeek Harness.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./auth": "./lib/auth.js",
+    "./connector": "./lib/connector.js",
+    "./market": "./lib/market.js",
+    "./bundle": "./lib/bundle.js",
+    "./session-plugin": "./lib/session-plugin.js",
+    "./skill-providers": "./lib/skill-providers.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.0-rc.1 <0.3.0-0"
+  },
+  "dependencies": {
+    "tar": "^7.5.22",
+    "yaml": "^2.9.0"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "expert",
+    "skills",
+    "workbuddy"
+  ],
+  "license": "MIT"
+}

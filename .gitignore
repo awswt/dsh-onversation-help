@@ -1,0 +1,10 @@
+node_modules/
+*.log
+.env
+.env.*
+.DS_Store
+coverage/
+.onversation-help/
+
+.workbuddy/
+package-lock.json
