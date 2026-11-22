@@ -191,6 +191,8 @@ DSH_APP_EXE="D:/Program Files/deepseek harness/DeepSeek Harness.exe" DSH_BIN="D:
 
 设计文档：[docs/dsh-onversation-help-design.md](docs/dsh-onversation-help-design.md)
 
+安装与测试报告：[docs/INSTALLATION-AND-TEST-REPORT.md](docs/INSTALLATION-AND-TEST-REPORT.md)
+
 ## License
 
 MIT
